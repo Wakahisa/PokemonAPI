@@ -48,6 +48,7 @@ def api_filter():
         to_filter.append(name)
     if pokemon_type:
         query += ' pokemon_type=? AND'
+        to_filter.append(pokemon_type)
     if not (id or name or pokemon_type):
         return page_not_found(404)
 
